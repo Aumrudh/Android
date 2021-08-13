@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="horizontal"
+    android:padding="10sp">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMI Calculator"
+        android:textSize="30sp"
+        android:layout_marginLeft="105dp"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:id="@+id/principle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Principle"
+        android:textSize="30sp"
+        android:layout_below="@+id/title"
+        android:paddingTop="50dp"
+        android:paddingLeft="25dp"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="226dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="28dp"
+        android:layout_toRightOf="@id/principle"
+        android:hint="Enter Principle "
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/interest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/principle"
+        android:layout_marginTop="27dp"
+        android:paddingLeft="25dp"
+        android:paddingTop="50dp"
+        android:text="Interest"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <Spinner
+        android:id="@+id/rate"
+        android:layout_width="239dp"
+        android:layout_height="66dp"
+        android:layout_below="@+id/principle"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="49dp"
+        android:layout_toRightOf="@id/interest"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/interest"
+        android:layout_marginTop="29dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="50dp"
+        android:text="No.of Months"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <SeekBar
+        android:id="@+id/seekyear"
+        android:layout_width="191dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/interest"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="71dp" />
+
+    <TextView
+        android:id="@+id/y"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekyear"
+        android:layout_marginLeft="195dp"
+        android:layout_marginTop="44dp"        android:text="hello"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/y"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="58dp"
+        android:text="Calculate EMI"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+</RelativeLayout>
+
