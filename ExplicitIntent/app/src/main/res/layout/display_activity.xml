@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_marginLeft="30dp"
+        android:text="Coarse Registration Details"
+        android:textSize="30dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:layout_width="183dp"
+        android:layout_height="57dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="80dp"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="175dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="140dp"
+        android:text="Roll No"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/rollno"
+        android:layout_width="175dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="140dp"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="183dp"
+        android:layout_height="55dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="200dp"
+        android:text="Course Name"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/coursename"
+        android:layout_width="175dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="200dp"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="260dp"
+        android:text="Course Duration"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/courseduration"
+        android:layout_width="175dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="260dp"
+        android:textColor="@color/black"
+        android:textSize="25dp" />
+
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="back"
+        android:layout_marginTop="330dp"
+        android:layout_marginLeft="155dp"/>
+
+</RelativeLayout>
