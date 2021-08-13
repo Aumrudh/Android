@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setUserTypeOnButtonClick();
         TextView mDisplayDate = (TextView) findViewById(R.id.Date);
 
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
@@ -50,28 +51,41 @@ public class MainActivity extends AppCompatActivity {
                 mDisplayDate.setText(date);
             }
         };
-        calAge();
-        Button button = (Button) findViewById(R.id.calculateage);
+        //calAge();
+
+
+    }
+
+    private void setUserTypeOnButtonClick() {
+       /* Button button = (Button) findViewById(R.id.calculateage);
         button.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_LONG);
+                Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_LONG).show();
             }
         });
+        */
+        calAge();
+
     }
+
     public void calAge(){
         Button button = (Button) findViewById(R.id.calculateage);
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/mm/yyyy");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
         button.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 Date current_date= new Date();
                 String formattedDate = simpleDateFormat.format(current_date);
                 String[] d1=formattedDate.split("/");
                 String[] d2=date.split("/");
-                String y=String.valueOf(Integer.parseInt(d2[2])-Integer.parseInt(d1[2]));
-                String m=String.valueOf(Integer.parseInt(d2[1])-Integer.parseInt(d1[1]));
-                String d=String.valueOf(Integer.parseInt(d2[0])-Integer.parseInt(d1[0]));
-                Toast.makeText(getApplicationContext(),"You are "+ y +" years "+ m +"months" + d +"days old!",Toast.LENGTH_LONG);
+               //Toast.makeText(getApplicationContext(),formattedDate,Toast.LENGTH_LONG).show();
+
+                String y=String.valueOf(Integer.parseInt(d1[2])-Integer.parseInt(d2[2]));
+                String m=String.valueOf(Integer.parseInt(d1[1])-Integer.parseInt(d2[1]));
+                String d=String.valueOf(Math.abs(Integer.parseInt(d1[0])-Integer.parseInt(d2[0])));
+                Toast.makeText(getApplicationContext(),"You are "+ y +" years "+ m +" months " + d +" days old!",Toast.LENGTH_LONG).show();
             }
         });
     }

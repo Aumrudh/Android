@@ -35,13 +35,13 @@
         android:hint="Select Date"
         android:textColor="@color/black"
         android:textSize="30sp" />
+
     <Button
         android:id="@+id/calculateage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
         android:layout_marginTop="200dp"
         android:text="Calculate Age"
-        android:textSize="20dp"
-        android:layout_marginLeft="100dp"
-        />
+        android:textSize="20dp" />
 </RelativeLayout>
