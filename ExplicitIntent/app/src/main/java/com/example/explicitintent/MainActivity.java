@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("Course Name",String.valueOf(((EditText) findViewById(R.id.coursename)).getText()));
                 i.putExtra("Course Duration",String.valueOf(((EditText) findViewById(R.id.courseduration)).getText()));
                 startActivity(i);
+
             }
         });
     }
