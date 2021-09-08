@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -54,12 +55,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), SendSMS.class);
+                /*Intent i = new Intent(getApplicationContext(), SendSMS.class);
                 i.putExtra("Source",String.valueOf(((EditText) findViewById(R.id.src)).getText()));
                 i.putExtra("Destination", String.valueOf(((EditText) findViewById(R.id.dest)).getText()));
                 i.putExtra("Mode of Vehicle",mode);
                 i.putExtra("Date",date);
-                startActivity(i);
+                startActivity(i);*/
+                String src=String.valueOf(((EditText) findViewById(R.id.src)).getText());
+                String dest=String.valueOf(((EditText) findViewById(R.id.dest)).getText());
+                String msg = "Source  : " + src + "\nDestination : " + dest + "\nMode of Transport : " + mode + "\nDate : " + date + "\n";
+                Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"+"9444769094"));
+                sendIntent.putExtra("sms_body", msg);
+                //sendIntent.setType("vnd.android-dir/mms-sms");
+                startActivity(sendIntent);
+
 
             }
         });
