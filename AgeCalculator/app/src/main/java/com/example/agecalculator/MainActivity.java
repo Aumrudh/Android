@@ -21,7 +21,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setUserTypeOnButtonClick();
         TextView mDisplayDate = (TextView) findViewById(R.id.Date);
 
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
@@ -51,23 +50,12 @@ public class MainActivity extends AppCompatActivity {
                 mDisplayDate.setText(date);
             }
         };
-        //calAge();
-
-
-    }
-
-    private void setUserTypeOnButtonClick() {
-       /* Button button = (Button) findViewById(R.id.calculateage);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_LONG).show();
-            }
-        });
-        */
         calAge();
 
+
     }
+
+
 
     public void calAge(){
         Button button = (Button) findViewById(R.id.calculateage);
