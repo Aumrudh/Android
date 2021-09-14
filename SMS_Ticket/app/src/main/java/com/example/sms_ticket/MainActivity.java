@@ -14,23 +14,30 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     DatePickerDialog.OnDateSetListener mDateSetListener ;
     String date="";
-    String mode ="";
+    String src ="";
+    String dst="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String[] in={"Bike","Car","Bus","Train","Flight","Ship"};
-        Spinner spin = (Spinner) findViewById(R.id.mode);
+        String[] in={"","Madurai","Chennai","Bengaluru","Hyderabad"};
+        Spinner spin = (Spinner) findViewById(R.id.src);
         spin.setOnItemSelectedListener(this);
         ArrayAdapter aa = new ArrayAdapter(this,android.R.layout.simple_spinner_item,in);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(aa);
+        Spinner spin2 = (Spinner) findViewById(R.id.dst);
+        //ArrayAdapter aa2 = new ArrayAdapter(this,android.R.layout.simple_spinner_item,in);
+        //aa2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin2.setOnItemSelectedListener(this);
+        spin2.setAdapter(aa);
         TextView mDisplayDate = (TextView) findViewById(R.id.Date);
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,28 +63,45 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                /*Intent i = new Intent(getApplicationContext(), SendSMS.class);
-                i.putExtra("Source",String.valueOf(((EditText) findViewById(R.id.src)).getText()));
-                i.putExtra("Destination", String.valueOf(((EditText) findViewById(R.id.dest)).getText()));
-                i.putExtra("Mode of Vehicle",mode);
-                i.putExtra("Date",date);
-                startActivity(i);*/
-                String src=String.valueOf(((EditText) findViewById(R.id.src)).getText());
-                String dest=String.valueOf(((EditText) findViewById(R.id.dest)).getText());
-                String msg = "Source  : " + src + "\nDestination : " + dest + "\nMode of Transport : " + mode + "\nDate : " + date + "\n";
+                String msg = "Source  : " + src + "\nDestination : " + dst + "\nDate : " + date + "\n";
                 Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"+"9444769094"));
                 sendIntent.putExtra("sms_body", msg);
                 //sendIntent.setType("vnd.android-dir/mms-sms");
                 startActivity(sendIntent);
-
-
             }
         });
     }
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        Spinner spin = (Spinner) findViewById(R.id.mode);
-        mode=spin.getSelectedItem().toString();
+        Spinner spin = (Spinner) findViewById(R.id.src);
+        src=spin.getSelectedItem().toString();
+        Spinner spin2 = (Spinner) findViewById(R.id.dst);
+        dst=spin2.getSelectedItem().toString();
+        Toast.makeText(getApplicationContext(), "inside onItem", Toast.LENGTH_SHORT).show();
+        if(src=="Madurai") {
+            Toast.makeText(getApplicationContext(), "madurai", Toast.LENGTH_SHORT).show();
+            if (dst == "Bengaluru") {
+                Toast.makeText(getApplicationContext(), "bangalore", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "hi", Toast.LENGTH_SHORT).show();
+                String t[] = {"Mysore Express", "Nagerkovil Express"};
+                Spinner train = (Spinner) findViewById(R.id.train);
+                ArrayAdapter aat = new ArrayAdapter(this, android.R.layout.simple_spinner_item, t);
+                aat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                train.setOnItemSelectedListener(this);
+                train.setAdapter(aat);
+            }
+            else{
+                String t[] = {"No trains Available"};
+                Spinner train = (Spinner) findViewById(R.id.train);
+                ArrayAdapter aat = new ArrayAdapter(this, android.R.layout.simple_spinner_item, t);
+                aat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                train.setOnItemSelectedListener(this);
+                train.setAdapter(aat);
+            }
+        }
+
+
+
     }
 
     @Override
