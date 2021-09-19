@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EmployeeManagement">
         <activity
+            android:name=".viewEmployee"
+            android:exported="true" />
+        <activity
+            android:name=".updateEmployee"
+            android:exported="true" />
+        <activity
+            android:name=".deleteEmployee"
+            android:exported="true" />
+        <activity
+            android:name=".InsertEmployee"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
