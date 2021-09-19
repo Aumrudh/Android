@@ -12,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,10 +25,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     String date="";
     String src ="";
     String dst="";
+    String trainname="";
+    String berth="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        RadioGroup radioGroup=(RadioGroup)findViewById(R.id.radioGroup);
         String[] in={"","Madurai","Chennai","Bengaluru","Hyderabad"};
         Spinner spin = (Spinner) findViewById(R.id.src);
         spin.setOnItemSelectedListener(this);
@@ -34,10 +39,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(aa);
         Spinner spin2 = (Spinner) findViewById(R.id.dst);
-        //ArrayAdapter aa2 = new ArrayAdapter(this,android.R.layout.simple_spinner_item,in);
-        //aa2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin2.setOnItemSelectedListener(this);
         spin2.setAdapter(aa);
+        Spinner train = (Spinner) findViewById(R.id.train);
+        String t[] = {"No trains Available"};
+        ArrayAdapter aat = new ArrayAdapter(this, android.R.layout.simple_spinner_item, t);
+        aat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        train.setOnItemSelectedListener(this);
+        train.setAdapter(aat);
         TextView mDisplayDate = (TextView) findViewById(R.id.Date);
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,8 +72,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String msg = "Source  : " + src + "\nDestination : " + dst + "\nDate : " + date + "\n";
-                Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"+"9444769094"));
+                int selectedId = radioGroup.getCheckedRadioButtonId();
+                RadioButton genderradioButton = (RadioButton) findViewById(selectedId);
+                genderradioButton = (RadioButton) findViewById(selectedId);
+               // Toast.makeText(getApplicationContext(),genderradioButton.getText(), Toast.LENGTH_SHORT).show();
+                berth=String.valueOf(genderradioButton.getText());
+                int pnr = (int)(Math.random()*(100000));
+                String msg = "Pnr Number : "+pnr+"\nSource  : " + src + "\nDestination : " + dst + "\nDate : " + date + "\nTrain name : "+trainname+"\n Coach : D7"+"\nBerth : "+berth+"\nStatus : Confirmed"+"\n";
+                Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:"+"9597554507"));
                 sendIntent.putExtra("sms_body", msg);
                 //sendIntent.setType("vnd.android-dir/mms-sms");
                 startActivity(sendIntent);
@@ -77,31 +92,25 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         src=spin.getSelectedItem().toString();
         Spinner spin2 = (Spinner) findViewById(R.id.dst);
         dst=spin2.getSelectedItem().toString();
-        Toast.makeText(getApplicationContext(), "inside onItem", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(), "inside onItem", Toast.LENGTH_SHORT).show();
+        Spinner train = (Spinner) findViewById(R.id.train);
         if(src=="Madurai") {
-            Toast.makeText(getApplicationContext(), "madurai", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "madurai", Toast.LENGTH_SHORT).show();
             if (dst == "Bengaluru") {
-                Toast.makeText(getApplicationContext(), "bangalore", Toast.LENGTH_SHORT).show();
-                Toast.makeText(getApplicationContext(), "hi", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "bangalore", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "hi", Toast.LENGTH_SHORT).show();
                 String t[] = {"Mysore Express", "Nagerkovil Express"};
-                Spinner train = (Spinner) findViewById(R.id.train);
+
                 ArrayAdapter aat = new ArrayAdapter(this, android.R.layout.simple_spinner_item, t);
                 aat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 train.setOnItemSelectedListener(this);
                 train.setAdapter(aat);
             }
             else{
-                String t[] = {"No trains Available"};
-                Spinner train = (Spinner) findViewById(R.id.train);
-                ArrayAdapter aat = new ArrayAdapter(this, android.R.layout.simple_spinner_item, t);
-                aat.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                train.setOnItemSelectedListener(this);
-                train.setAdapter(aat);
+
             }
         }
-
-
-
+       trainname=train.getSelectedItem().toString();
     }
 
     @Override
