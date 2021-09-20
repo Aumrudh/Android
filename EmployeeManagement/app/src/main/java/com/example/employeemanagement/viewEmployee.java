@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.database.Cursor;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class viewEmployee extends AppCompatActivity {
@@ -27,11 +28,13 @@ public class viewEmployee extends AppCompatActivity {
             buffer.append("Experiance:"+res.getString(3)+"\n");
             buffer.append("\n");
         }
-        AlertDialog.Builder builder=new AlertDialog.Builder(viewEmployee.this);
+        TextView t = findViewById(R.id.resultSet);
+        t.setText(buffer.toString());
+        /*AlertDialog.Builder builder=new AlertDialog.Builder(viewEmployee.this);
         builder.setCancelable(true);
         builder.setTitle("Book Enteries");
         builder.setMessage(buffer.toString());
-        builder.show();
+        builder.show();*/
        /* Intent i = new Intent(getApplicationContext(), ViewResult.class);
         i.putExtra("Result", buffer.toString());
         startActivity(i);*/
