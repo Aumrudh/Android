@@ -44,7 +44,7 @@ public class DBHelper extends SQLiteOpenHelper {
         ContentValues contentValues =new ContentValues();
         contentValues.put("name",name);
         contentValues.put("designation",design);
-        contentValues.put("experience",eid);
+        contentValues.put("experience",exp);
         Cursor cursor = DB.rawQuery("SELECT * FROM Employee WHERE empid =? ",new String[]{String.valueOf(eid) });
         if (cursor.getCount()>0){
             long result = DB.update("Employee",contentValues,"empid= ?",new String[]{String.valueOf(eid)});
