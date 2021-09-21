@@ -71,7 +71,7 @@ public class updateEmployee extends AppCompatActivity implements AdapterView.OnI
                     }
                     AlertDialog.Builder builder=new AlertDialog.Builder(updateEmployee.this);
                     builder.setCancelable(true);
-                    builder.setTitle("Book Enteries");
+                    builder.setTitle("Updated Details");
                     builder.setMessage(buffer.toString());
                     builder.show();
                 }

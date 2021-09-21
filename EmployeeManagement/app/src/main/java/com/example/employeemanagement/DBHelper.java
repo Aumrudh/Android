@@ -42,7 +42,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public boolean updateUserData(int eid,String name,String design,int exp){
         SQLiteDatabase DB = this.getWritableDatabase();
         ContentValues contentValues =new ContentValues();
-        contentValues.put("name",name);
+        //contentValues.put("name",name);
         contentValues.put("designation",design);
         contentValues.put("experience",exp);
         Cursor cursor = DB.rawQuery("SELECT * FROM Employee WHERE empid =? ",new String[]{String.valueOf(eid) });
@@ -75,7 +75,7 @@ public class DBHelper extends SQLiteOpenHelper {
     }
     public Cursor viewUserData(){
         SQLiteDatabase DB = this.getWritableDatabase();
-        Cursor cursor = DB.rawQuery("SELECT * FROM Employee ",null);
+        Cursor cursor = DB.rawQuery("SELECT * FROM Employee WHERE designation= ?",new String[]{"Data Analyst"});
         return cursor;
     }
 

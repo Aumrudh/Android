@@ -30,13 +30,6 @@ public class viewEmployee extends AppCompatActivity {
         }
         TextView t = findViewById(R.id.resultSet);
         t.setText(buffer.toString());
-        /*AlertDialog.Builder builder=new AlertDialog.Builder(viewEmployee.this);
-        builder.setCancelable(true);
-        builder.setTitle("Book Enteries");
-        builder.setMessage(buffer.toString());
-        builder.show();*/
-       /* Intent i = new Intent(getApplicationContext(), ViewResult.class);
-        i.putExtra("Result", buffer.toString());
-        startActivity(i);*/
+
     }
 }
