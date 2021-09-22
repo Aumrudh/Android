@@ -25,8 +25,8 @@
 
     <EditText
         android:id="@+id/latitude"
-        android:layout_width="177dp"
-        android:layout_height="46dp"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="200sp"
         android:layout_marginTop="70sp"
         android:textColor="@color/black"
@@ -43,8 +43,8 @@
 
     <EditText
         android:id="@+id/longitude"
-        android:layout_width="181dp"
-        android:layout_height="48dp"
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="200sp"
         android:layout_marginTop="150sp"
         android:textColor="@color/black"

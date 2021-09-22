@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),address + "\n" +city +"\n",Toast.LENGTH_LONG ).show();
                 }
                 catch (Exception e){
-                    e.printStackTrace();;
+                    e.printStackTrace();  //Latitude: 9.524679°. Longitude: 77.855309
                 }
             }
         });
