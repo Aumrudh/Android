@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Food">
+
+    <TextView
+        android:id="@+id/bmi"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="35sp"
+        android:layout_marginLeft="20sp"
+        android:textColor="@color/black"
+        android:textSize="30sp"/>
+
+    <Spinner
+        android:id="@+id/fooditems"
+        android:layout_width="163dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="185sp"
+        android:layout_marginTop="35sp" />
+
+    <ListView
+        android:id="@+id/listfood"
+        android:layout_width="408dp"
+        android:layout_height="453dp"
+        android:layout_marginTop="185sp" />
+
+    <Button
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="85sp"
+        android:layout_marginLeft="110sp"
+        android:text="Check Food Calories" />
+</RelativeLayout>
