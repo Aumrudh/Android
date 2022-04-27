@@ -1,0 +1,183 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.miniproject"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:5:5-65
+11-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:5:22-62
+12    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+12-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:6:5-82
+12-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:6:22-79
+13    <uses-permission android:name="android.permission.MANAGE_MEDIA" />
+13-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:7:5-71
+13-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:7:22-68
+14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+14-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:8:5-80
+14-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:8:22-77
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:9:5-81
+15-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:9:22-78
+16
+17    <uses-feature
+17-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:12:5-14:35
+18        android:name="android.hardware.camera"
+18-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:13:9-47
+19        android:required="true" />
+19-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:14:9-32
+20
+21    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+22    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+23    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+23-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\60d0430630cefa18458153efdee39bef\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:26:5-79
+23-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\60d0430630cefa18458153efdee39bef\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:26:22-76
+24    <uses-permission android:name="android.permission.INTERNET" />
+24-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\60d0430630cefa18458153efdee39bef\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:27:5-67
+24-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\60d0430630cefa18458153efdee39bef\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:27:22-64
+25
+26    <application
+26-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:16:5-57:19
+27        android:allowBackup="true"
+27-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:17:9-35
+28        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+28-->[androidx.core:core:1.5.0] C:\Users\MURUG\.gradle\caches\transforms-3\fafb8d32a6b6b554ceb0c63b301e5148\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+29        android:debuggable="true"
+30        android:icon="@mipmap/ic_launcher"
+30-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:18:9-43
+31        android:label="@string/app_name"
+31-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:19:9-41
+32        android:requestLegacyExternalStorage="true"
+32-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:20:9-52
+33        android:roundIcon="@mipmap/ic_launcher_round"
+33-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:21:9-54
+34        android:supportsRtl="true"
+34-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:22:9-35
+35        android:testOnly="true"
+36        android:theme="@style/Theme.Miniproject" >
+36-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:23:9-49
+37        <activity
+37-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:24:9-26:39
+38            android:name="com.example.miniproject.RegisterComplaints"
+38-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:25:13-47
+39            android:exported="true" />
+39-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:26:13-36
+40        <activity
+40-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:27:9-29:39
+41            android:name="com.example.miniproject.Camera"
+41-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:28:13-35
+42            android:exported="true" />
+42-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:29:13-36
+43        <activity
+43-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:30:9-32:39
+44            android:name="com.example.miniproject.ViewComplaint"
+44-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:31:13-42
+45            android:exported="true" />
+45-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:32:13-36
+46        <activity
+46-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:33:9-35:39
+47            android:name="com.example.miniproject.WorkerHome"
+47-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:34:13-39
+48            android:exported="true" />
+48-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:35:13-36
+49        <activity
+49-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:36:9-38:39
+50            android:name="com.example.miniproject.UserHome"
+50-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:37:13-37
+51            android:exported="true" />
+51-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:38:13-36
+52        <activity
+52-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:39:9-41:39
+53            android:name="com.example.miniproject.WorkerLogin"
+53-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:40:13-40
+54            android:exported="true" />
+54-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:41:13-36
+55        <activity
+55-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:42:9-44:39
+56            android:name="com.example.miniproject.AdminLogin"
+56-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:43:13-39
+57            android:exported="true" />
+57-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:44:13-36
+58        <activity
+58-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:45:9-47:39
+59            android:name="com.example.miniproject.AdminHome"
+59-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:46:13-38
+60            android:exported="true" />
+60-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:47:13-36
+61        <activity
+61-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:48:9-56:20
+62            android:name="com.example.miniproject.MainActivity"
+62-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:49:13-41
+63            android:exported="true" >
+63-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:50:13-36
+64            <intent-filter>
+64-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:51:13-55:29
+65                <action android:name="android.intent.action.MAIN" />
+65-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:52:17-69
+65-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:52:25-66
+66
+67                <category android:name="android.intent.category.LAUNCHER" />
+67-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:54:17-77
+67-->C:\Users\MURUG\Miniproject\app\src\main\AndroidManifest.xml:54:27-74
+68            </intent-filter>
+69        </activity>
+70
+71        <service
+71-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\60d0430630cefa18458153efdee39bef\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:30:9-36:19
+72            android:name="com.google.firebase.components.ComponentDiscoveryService"
+72-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\60d0430630cefa18458153efdee39bef\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:31:13-84
+73            android:directBootAware="true"
+73-->[com.google.firebase:firebase-common:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\06ffe55eea533cee6b8fd6cccd8d2647\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:35:13-43
+74            android:exported="false" >
+74-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\60d0430630cefa18458153efdee39bef\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:32:13-37
+75            <meta-data
+75-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\60d0430630cefa18458153efdee39bef\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:33:13-35:85
+76                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+76-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\60d0430630cefa18458153efdee39bef\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:34:17-107
+77                android:value="com.google.firebase.components.ComponentRegistrar" />
+77-->[com.google.firebase:firebase-storage:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\60d0430630cefa18458153efdee39bef\transformed\jetified-firebase-storage-20.0.0\AndroidManifest.xml:35:17-82
+78            <meta-data
+78-->[com.google.firebase:firebase-database:20.0.2] C:\Users\MURUG\.gradle\caches\transforms-3\1fb9ebd7bdbb4f8d10d47f075c5bc900\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:32:13-34:85
+79                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+79-->[com.google.firebase:firebase-database:20.0.2] C:\Users\MURUG\.gradle\caches\transforms-3\1fb9ebd7bdbb4f8d10d47f075c5bc900\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:33:17-109
+80                android:value="com.google.firebase.components.ComponentRegistrar" />
+80-->[com.google.firebase:firebase-database:20.0.2] C:\Users\MURUG\.gradle\caches\transforms-3\1fb9ebd7bdbb4f8d10d47f075c5bc900\transformed\jetified-firebase-database-20.0.2\AndroidManifest.xml:34:17-82
+81        </service>
+82
+83        <provider
+83-->[com.google.firebase:firebase-common:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\06ffe55eea533cee6b8fd6cccd8d2647\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:26:9-31:39
+84            android:name="com.google.firebase.provider.FirebaseInitProvider"
+84-->[com.google.firebase:firebase-common:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\06ffe55eea533cee6b8fd6cccd8d2647\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:27:13-77
+85            android:authorities="com.example.miniproject.firebaseinitprovider"
+85-->[com.google.firebase:firebase-common:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\06ffe55eea533cee6b8fd6cccd8d2647\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:28:13-72
+86            android:directBootAware="true"
+86-->[com.google.firebase:firebase-common:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\06ffe55eea533cee6b8fd6cccd8d2647\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:29:13-43
+87            android:exported="false"
+87-->[com.google.firebase:firebase-common:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\06ffe55eea533cee6b8fd6cccd8d2647\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:30:13-37
+88            android:initOrder="100" />
+88-->[com.google.firebase:firebase-common:20.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\06ffe55eea533cee6b8fd6cccd8d2647\transformed\jetified-firebase-common-20.0.0\AndroidManifest.xml:31:13-36
+89
+90        <activity
+90-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\MURUG\.gradle\caches\transforms-3\2ae1c92f5b1a72bde4f0012b57382875\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+91            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+91-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\MURUG\.gradle\caches\transforms-3\2ae1c92f5b1a72bde4f0012b57382875\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+92            android:exported="false"
+92-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\MURUG\.gradle\caches\transforms-3\2ae1c92f5b1a72bde4f0012b57382875\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+93            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+93-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\MURUG\.gradle\caches\transforms-3\2ae1c92f5b1a72bde4f0012b57382875\transformed\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+94
+95        <meta-data
+95-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\bed7cf9849902c0db98bebfe85141435\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:23:9-25:69
+96            android:name="com.google.android.gms.version"
+96-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\bed7cf9849902c0db98bebfe85141435\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:24:13-58
+97            android:value="@integer/google_play_services_version" />
+97-->[com.google.android.gms:play-services-basement:17.0.0] C:\Users\MURUG\.gradle\caches\transforms-3\bed7cf9849902c0db98bebfe85141435\transformed\jetified-play-services-basement-17.0.0\AndroidManifest.xml:25:13-66
+98    </application>
+99
+100</manifest>
